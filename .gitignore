@@ -22,3 +22,6 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+spring-la-mia-pizzeria-crud/src/main/java/it/emercado/spring_la_mia_pizzeria_crud/SpringLaMiaPizzeriaCrudApplication.java
+spring-la-mia-pizzeria-crud/src/main/resources/application.properties
+spring-la-mia-pizzeria-crud/src/test/java/it/emercado/spring_la_mia_pizzeria_crud/SpringLaMiaPizzeriaCrudApplicationTests.java
