@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "la_pizza")
@@ -19,18 +20,19 @@ public class PizzaModel {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	@NotBlank(message = "Il nome della pizza è obbligatorio")
+	@NotBlank(message = "Il nome della pizza è obbligatorio.")
 	@Column(name = "nome", nullable = false)
 	private String nome;
 	
-	@NotBlank(message = "La descrizione della pizza è obbligatoria")
+	@Size(min=0, max=20, message="Il nome deve contenere tra le 0 e i 20 caratteri.")
+	@NotBlank(message = "La descrizione della pizza è obbligatoria.")
 	@Column(name = "descrizione", nullable = true, unique = true)
 	private String descrizione;
 	
 	@Column(name = "foto_url", nullable = true)
 	private String fotoUrl;
 	
-	@NotNull(message = "Il prezzo della pizza è obbligatorio")
+	@NotNull(message = "Il prezzo della pizza è obbligatorio.")
 	@Column(name = "prezzo", nullable = false)
 	private double prezzo;
 
