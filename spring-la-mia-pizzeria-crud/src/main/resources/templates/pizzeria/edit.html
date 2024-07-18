@@ -13,15 +13,15 @@
     <!-- Bootstrap icons -->
     <link href="https://icons.getbootstrap.com/"/>  
         
-    <title>ADD PIZZA</title>
+    <title>EDIT PIZZA</title>
         
 </head>
 <body>
     <div class="container mx-auto">
-        <h1>Crea la tua nuova pizza</h1>
+        <h1>Modifica la tua  pizza</h1>
         
         <form id="form-pizza" 
-              th:action="@{/pizzeria/create}" 
+              th:action="@{/pizzeria/edit/{id}}" 
               th:object="${pizza}"
               method="post">
           
@@ -70,7 +70,7 @@
               
               <div class="col-auto">
                   <button type="submit" 
-                  class="btn btn-primary mb-3">Salva</button>
+                  class="btn btn-primary mb-3">Salva modifiche</button>
                 </div>
           
           
